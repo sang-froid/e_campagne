@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("./assets/font-family/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+body {
+  font-family: "Montserrat-Medium";
+}

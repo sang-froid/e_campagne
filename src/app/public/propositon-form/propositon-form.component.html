@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumission de Proposition Citoyenne - Bénin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/4.1.0/primeicons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <!-- En-tête -->
+        <div class="page-header">
+            <div class="container position-relative py-4">
+                <!-- Bouton retour -->
+                <button class="btn-back" (click)="goToHome()" aria-label="Retour à l'accueil">
+                    <i class="pi pi-arrow-left"></i>
+                </button>
+
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="display-5 fw-bold">Soumission de Proposition Citoyenne</h1>
+                        <p class="lead mb-0">Partagez vos idées pour contribuer au développement du Bénin</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="user-info d-flex align-items-center justify-content-md-end">
+                            <div class="me-3">
+                                <i class="pi pi-user" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Citoyen Béninois</h5>
+                                <small>Votre voix compte</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Message de succès (caché initialement) -->
+            <div class="success-message fade-in" id="successMessage" style="display: none;">
+                <i class="pi pi-check-circle"></i>
+                <h3>Votre proposition a été soumise avec succès !</h3>
+                <p>Merci pour votre contribution. Votre idée sera examinée et pourra être mise en œuvre pour le
+                    développement du Bénin.</p>
+                <p class="mb-4">Vous recevrez un accusé de réception par email.</p>
+                <button class="btn btn-submit" onclick="newProposition()">Faire une nouvelle proposition</button>
+            </div>
+
+            <!-- Formulaire de proposition -->
+            <div class="proposition-form fade-in" id="propositionForm">
+                <div class="form-header">
+                    <h2 class="mb-2">Nouvelle Proposition Citoyenne</h2>
+                    <div class="category-badge">
+                        <i class="pi pi-lightbulb me-2"></i>{{infoThematique?.libelle || '-'}}
+                    </div>
+                </div>
+
+                <form id="propositionFormElement">
+                    <!-- Étape 2: Détails de la proposition -->
+                    <div class="form-step active" id="step2">
+                        <div class="form-section">
+                            <h4 class="section-title"><i class="pi pi-file"></i> Détails de votre proposition</h4>
+
+                            <div class="mb-4">
+                                <label for="title" class="form-label required-field">Thématique de votre
+                                    proposition</label>
+                                <select [(ngModel)]="item.thematique_id" (change)="changeThematique()"
+                                    class="form-select" name="thematique_id" id="thematique">
+
+                                    <option value=""></option>
+                                    <option *ngFor="let item of thematiqueItems" [ngValue]="item">{{item.libelle}}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="description" class="form-label required-field">Description détaillée</label>
+                                <textarea [(ngModel)]="item.proposition" name="titre" class="form-control"
+                                    id="description" rows="6" required
+                                    placeholder="Décrivez votre proposition en détail, en expliquant le problème et votre solution"></textarea>
+                                <div class="character-count" id="descriptionCount">0/2000 caractères</div>
+                                <div class="help-text">Soyez aussi précis que possible. Décrivez le problème, votre
+                                    solution et comment elle pourrait être mise en œuvre.</div>
+                            </div>
+
+
+
+                            <div class="d-flex justify-content-end mt-4">
+                                <button (click)="sendProposition()" type="submit" class="btn btn-submit"
+                                    [disabled]="loading">
+                                    <span *ngIf="!loading">Soumettre la proposition</span>
+                                    <span *ngIf="loading">
+                                        <i class="pi pi-spin pi-spinner" style="margin-right: 0.5rem"></i>
+                                        Envoi...
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 free-space text-center">
+        <strong>Propositions libres (Espace citoyen ouvert)</strong><br>
+        « Vous avez une idée ou un rêve pour le Bénin ?<br>
+        Écrivez-le ici, en toute liberté. »
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Pour participation, segment ministère<br>
+            <strong>avecwadagni.com</strong>
+            <img src="../../../assets/image/remove.png" width="100" alt="" srcset="">
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<p-toast position="top-right"></p-toast>

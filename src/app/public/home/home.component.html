@@ -1,0 +1,490 @@
+<body>
+
+  <!-- Navbar -->
+  <!-- app.component.html -->
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-2 custom-navbar compact">
+      <div class="container-fluid justify-content-center align-items-center">
+
+        <!-- Logo à gauche -->
+        <a class="navbar-brand fw-bold text-primary me-3" href="#">
+          <img src="../../../assets/image/logo.jpg" width="100px" alt="">
+        </a>
+
+        <!-- Bouton burger (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu + bouton dans le collapse -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center d-flex align-items-center gap-3">
+            <li class="nav-item"><a (click)="scrollTo('whyMovementSection')" class="nav-link" href="#">Pourquoi ce
+                mouvement</a></li>
+            <li class="nav-item"><a (click)="scrollTo('hero-banner')" class="nav-link" href="#">La plateforme
+                citoyenne</a></li>
+            <li class="nav-item"><a (click)="scrollTo('valeur')" class="nav-link" href="#">Les valeurs et la vision</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('actualites')" href="#" class="nav-link">Actualités & Médias</a>
+            </li>
+          </ul>
+
+          <!-- Bouton "Nous rejoindre" visible en mobile -->
+          <div class="d-lg-none mt-3 text-center">
+            <a routerLink="/proposition" href="#" class="btn btn-join w-100">Nous rejoindre</a>
+          </div>
+        </div>
+
+        <!-- Bouton à droite visible uniquement sur grand écran -->
+        <div class="d-none d-lg-block ms-3">
+          <a routerLink="/proposition" href="#" class="btn btn-join">Nous rejoindre</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Section principale -->
+    <div class="container my-5">
+      <div class="row align-items-center text-center hero-section">
+
+        <!-- Colonne gauche -->
+        <div class="col-12 col-md-4 hero-text mb-4 mb-md-0">
+          <h2>Écouter avant de parler</h2>
+          <p>
+            Notre mouvement est né du désir de nombreux citoyens d’un Bénin gouverné
+            avec sérieux, compétence et pour l’intérêt général.
+          </p>
+        </div>
+
+        <!-- Image centrale -->
+        <div class="col-12 col-md-4 hero-center">
+          <div class="hero-center-content">
+            <h3>Plateforme de Recueil de Propositions Citoyennes</h3>
+            <a (click)="scrollTo('thematique')" href="#" class="btn">Je participe</a>
+          </div>
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="col-12 col-md-4 hero-text mt-4 mt-md-0">
+          <h2>Pour l’intérêt général</h2>
+          <p>
+            Sans être un parti politique, Avec WADAGNI rassemble toutes les énergies
+            citoyennes pour redonner à la politique son sens premier.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <section class="why-movement-details py-5" id="whyMovementSection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="section-header text-center mb-5">
+            <h2 style="color: #003366;" class="display-5  fw-bold mb-3">Pourquoi le Mouvement WADAGNI ?</h2>
+            <div class="divider mx-auto"></div>
+          </div>
+
+          <div class="content-wrapper">
+            <!-- Introduction -->
+            <div class="intro-card mb-5">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <p style="color: #c74372;" class="lead mb-3 text-center fw-bold ">
+                    Une initiative née du peuple
+                  </p>
+                  <p class="mb-3 text-center">
+                    Partout où nous sommes allés — dans les villages, les marchés, les universités, les foyers et jusque
+                    dans la diaspora —
+                    une même conviction s’est imposée : le Bénin doit continuer à avancer.
+                  </p>
+                  <p class="mb-3 text-center">
+                    Le peuple béninois ne réclame pas des miracles. Il veut du sérieux, de la stabilité et des résultats
+                    durables.
+                    Il attend des dirigeants compétents, cohérents, à l’écoute et tournés vers le bien commun.
+                  </p>
+                  <p class="mb-0 text-center">
+                    C’est de cette volonté populaire qu’est né le <strong>Mouvement Citoyen AVEC WADAGNI</strong> :
+                    une initiative libre, ouverte et non partisane, qui place le Bénin au-dessus des ambitions
+                    personnelles.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Points clés -->
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100">
+                  <div class="card border-0 h-100 shadow-sm">
+                    <div class="card-body p-4">
+                      <div  class="icon-wrapper mb-3">
+              <i class="pi pi-users" style="font-size: 2rem; color: #c74372;"></i>
+                      </div>
+                      <h4 class="h5 fw-bold mb-3">Un mouvement citoyen, pas un parti politique</h4>
+                      <p class="mb-0">
+                        Nous ne sommes pas un parti. Nous sommes des citoyens éclairés, des femmes et des hommes de
+                        conviction,
+                        unis par une idée simple : <strong>« Le Bénin se construit ensemble. »</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100">
+                  <div class="card border-0 h-100 shadow-sm">
+                    <div class="card-body p-4">
+                      <div class="icon-wrapper mb-3">
+                        <i class="pi pi-comments " style="font-size: 2rem; color: #c74372;"></i>
+                      </div>
+                      <h4 class="h5 fw-bold mb-3">Écouter, recueillir et agir</h4>
+                      <div class="mb-0">
+                        Notre mission est :
+                        <ul class="mb-0">
+                          <li>d’écouter le peuple,</li>
+                          <li>de recueillir sa parole,</li>
+                          <li>et de transformer ses idées en propositions concrètes.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100">
+                  <div class="card border-0 h-100 shadow-sm">
+                    <div class="card-body p-4">
+                      <div class="icon-wrapper mb-3">
+                        <i class="pi pi-globe " style="font-size: 2rem; color: #c74372;"></i>
+                      </div>
+                      <h4 class="h5 fw-bold mb-3">Une plateforme ouverte à tous</h4>
+                      <p class="mb-0">
+                        C’est pour cela que nous avons lancé la
+                        <strong>Plateforme de Recueil de Propositions Citoyennes (PRPC)</strong> —
+                        un espace inédit où chaque Béninoise et chaque Béninois, du territoire ou de la diaspora,
+                        peut faire entendre sa voix.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100">
+                  <div class="card border-0 h-100 shadow-sm">
+                    <div class="card-body p-4">
+                      <div class="icon-wrapper mb-3">
+                        <i class="pi pi-heart" style="font-size: 2rem;  color: #c74372;"></i>
+                      </div>
+                      <h4 class="h5 fw-bold mb-3">Une vision commune</h4>
+                      <p class="mb-0">
+                        Ensemble, nous croyons qu’un Bénin plus juste, plus stable et plus prospère est possible.
+                        Notre force réside dans notre unité et notre engagement pour le bien commun.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="hero-banner d-flex align-items-center justify-content-center text-center text-white" id="hero-banner">
+    <div class="overlay"></div>
+
+    <div class="content position-relative">
+      <!-- <img src="../../../assets/image/remove.png" alt="Logo Avec Wadagni" class="logo mb-4"> -->
+
+      <h2 class="fw-bold mb-3">LE BÉNIN S’ÉCOUTE.<br>LE BÉNIN SE CONSTRUIT.</h2>
+      <p class="lead mb-4">Dépose ta proposition. Ta voix compte.</p>
+      <a routerLink="/proposition" class="btn btn-primary btn-lg px-4 py-2">JE PARTICIPE MAINTENANT</a>
+    </div>
+  </div>
+
+  <section id="valeur" class="values-vision-section">
+    <div class="section-header">
+      <h1>LES VALEURS ET LA VISION</h1>
+      <p>Notre engagement pour un Bénin uni, prospère et tourné vers l'avenir</p>
+      <section class="values-vision-modern">
+        <div class="values-timeline">
+          <div class="value-item">
+            <div class="icon">
+              <img src="../../../assets/image/like.png" width="100px" alt="" srcset="">
+            </div>
+            <div class="content">
+              <h3 style="color: #c74372;">Discipline</h3>
+              <p>Faire ce qu’on dit, et bien le faire.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="icon">
+              <img src="../../../assets/image/like.png" width="100px" alt="" srcset="">
+            </div>
+            <div class="content">
+              <h3 style="color: #c74372;">Compétence</h3>
+              <p>Placer le savoir-faire et l’efficacité au cœur de l’action publique.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="icon">
+              <img src="../../../assets/image/like.png" width="100px" alt="" srcset="">
+            </div>
+            <div class="content">
+              <h3 style="color: #c74372;">Intégrité</h3>
+              <p>Agir dans la transparence, le respect et la loyauté envers le bien commun.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="icon">
+              <img src="../../../assets/image/like.png" width="100px" alt="" srcset="">
+            </div>
+            <div class="content">
+              <h3 style="color: #c74372;">Continuité</h3>
+              <p>Poursuivre ce qui fonctionne, consolider les acquis et innover avec méthode.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="icon">
+              <img src="../../../assets/image/like.png" width="100px" alt="" srcset="">
+            </div>
+            <div class="content">
+              <h3 style="color: #c74372;">Unité</h3>
+              <p>Croire que le Bénin se construit ensemble.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="vision-container">
+      <div class="vision-text">
+        <h1>Notre vision</h1>
+        <p>Notre vision est simple et forte : <span class="highlight">faire du citoyen l'acteur central du
+            développement</span>.</p>
+        <p>À travers la plateforme citoyenne, nous voulons que chaque idée et chaque mot partagé devienne une pierre
+          dans l'édifice du projet national.</p>
+        <p><strong>Romuald WADAGNI</strong> incarne cette vision : celle d'un leadership moderne, compétent, intègre et
+          orienté vers les résultats. Non pas comme un homme providentiel, mais comme le symbole d'une gouvernance
+          sérieuse, unie et tournée vers l'avenir.</p>
+      </div>
+
+      <div class="vision-image">
+        <div class="vision-image-content">
+          <i class="fas fa-eye"></i>
+          <h3>Une vision citoyenne</h3>
+          <p>Chaque voix compte dans la construction de notre avenir commun</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="promise-container">
+      <h1>Notre promesse</h1>
+      <div class="promise-text">
+        <p>Nous ne faisons pas campagne. Nous préparons l'avenir.</p>
+        <p>Nous ne cherchons pas à séduire, mais à rassembler et servir.</p>
+        <p>Parce qu'un pays avance quand son peuple croit, agit et construit.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h1>Recueil de propositions citoyennes</h1>
+      <p>Pour participer, sélectionnez une thématique et partagez vos idées.</p>
+    </div>
+
+    <div class="row g-3">
+      <!-- Skeleton si en chargement -->
+      <ng-container *ngIf="loading">
+        <div class="col-md-6" *ngFor="let i of [1,2,3,4,5,6]">
+          <div class="theme-card p-3 d-flex flex-column align-items-start" style="height:120px; border-radius:0.5rem;">
+            <!-- Cercle pour l'icône -->
+            <p-skeleton width="40px" height="40px" shape="circle"></p-skeleton>
+            <!-- Rectangle pour le texte -->
+            <p-skeleton width="80%" height="20px" class="mt-2"></p-skeleton>
+            <p-skeleton width="60%" height="20px" class="mt-1"></p-skeleton>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Thèmes réels -->
+      <ng-container *ngIf="!loading">
+        <div *ngFor="let theme of thematiqueItems" class="col-md-6" id="thematique">
+          <div (click)="goToFormPrpossition(theme)" style="cursor: pointer;"
+            class="theme-card d-flex flex-column align-items-start justify-content-center p-3"
+            [ngStyle]="{'background-color': getThemeColor(theme.code), 'color': getTextColor(theme.code), 'height':'120px', 'border-radius':'0.5rem'}">
+            <i class="pi" [ngClass]="getThemeIcon(theme.code)"></i>
+            <span class="mt-2">{{theme.libelle}}</span>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+
+
+
+    <br><br><br><br> <br>
+
+
+    <div class="container-fluid px-0">
+
+
+
+      <!-- Section Actualités et Médias avec PrimeNG Carousel -->
+      <section class="news-media-section py-5" id="actualites">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h1 class="display-5 fw-bold   mb-3">Actualités & Médias</h1>
+            <p class="lead text-muted">Suivez l'actualité du mouvement et nos dernières interventions</p>
+            <div class="header-divider mx-auto"></div>
+          </div>
+
+          <!-- PrimeNG Carousel -->
+          <p-carousel [value]="news" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="5000">
+            <ng-template let-newsItem pTemplate="item">
+              <div class="news-card">
+                <div class="card-image">
+                  <img [src]="newsItem.image" [alt]="newsItem.title">
+                  <div class="card-badge" [class]="'badge-' + newsItem.category">{{newsItem.categoryLabel}}</div>
+                </div>
+                <div class="card-content p-3">
+                  <div class="card-meta d-flex justify-content-between mb-2">
+                    <span class="date">{{newsItem.date}}</span>
+                  </div>
+                  <h3 class="card-title h5">{{newsItem.title}}</h3>
+                  <p class="card-excerpt">{{newsItem.excerpt}}</p>
+                  <div class="card-footer pt-2">
+                    <a (click)="openDialog(newsItem);" class="read-more  text-decoration-none fw-bold">
+                      {{newsItem.actionText}}
+                      <i class="pi pi-arrow-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+
+
+        </div>
+      </section>
+
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<br>
+<footer class="nike-footer">
+  <div class="footer-wave"></div>
+  <div class="footer-content">
+    <div class="footer-main">
+
+      <div class="footer-logo">
+
+        <img src="../../../assets/image/remove.png" alt="Logo Wadagni">
+        <p>Notre engagement pour un Bénin uni, prospère et tourné vers l'avenir. Rejoignez le mouvement citoyen.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a style="cursor: pointer;" (click)="scrollTo('whyMovementSection')">Pourquoi ce mouvement</a></li>
+          <li><a style="cursor: pointer;"(click)="scrollTo('hero-banner')">La plateforme citoyenne</a></li>
+          <li><a style="cursor: pointer;"(click)="scrollTo('valeur')">Les valeurs et la vision</a></li>
+          <li><a style="cursor: pointer;"(click)="scrollTo('actualites')">Actualités & Médias</a></li>
+          <li><a style="cursor: pointer;"routerLink="/proposition">Nous rejoindre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cotonou, Bénin</p>
+        <p><i class="fas fa-envelope"></i> contactavecwadagni.com</p>
+        <!-- <p><i class="fas fa-phone"></i> +229 XX XX XX XX</p> -->
+        <p><i class="fas fa-globe"></i> avecwadagni.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-cta">
+      <div class="footer-cta-content">
+        <h3>Rejoignez le mouvement</h3>
+        <p>Ensemble, construisons un Bénin prospère et tourné vers l'avenir. Votre voix compte.</p>
+        <a routerLink="/proposition" href="#" class="btn-join">Nous rejoindre</a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+    <!-- 
+      <div class="footer-bottom">
+        <p>&copy; 2023 avecwadagni.com - Tous droits réservés</p>
+        <div class="footer-bottom-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+        </div>
+      </div> -->
+  </div>
+</footer>
+
+
+
+<p-dialog header="{{selectedNews?.title}}" [(visible)]="displayDialog" [modal]="true"
+  [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '50vw', maxWidth: '800px'}" [draggable]="false"
+  [resizable]="false" class="news-dialog">
+
+  <div class="dialog-content">
+    <!-- Image avec overlay et effet de zoom -->
+    <div class="image-container">
+      <img [src]="selectedNews?.image" [alt]="selectedNews?.title" class="news-image">
+      <div class="image-overlay"></div>
+    </div>
+
+    <!-- Contenu textuel -->
+    <div class="text-content">
+      <p class="excerpt">{{selectedNews?.excerpt}}</p>
+
+      <div class="metadata">
+        <div class="meta-item">
+          <i class="pi pi-calendar"></i>
+          <span class="label">Date :</span>
+          <span class="value">{{selectedNews?.date | date:'dd/MM/yyyy'}}</span>
+        </div>
+
+        <div class="meta-item">
+          <i class="pi pi-tag"></i>
+          <span class="label">Catégorie :</span>
+          <span class="category-badge">{{selectedNews?.categoryLabel}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <button pButton label="Fermer" icon="pi pi-times" (click)="displayDialog = false" class="p-button-secondary">
+    </button>
+    <button pButton label="Lire la suite" icon="pi pi-external-link" class="p-button-primary">
+    </button>
+  </ng-template>
+</p-dialog>
